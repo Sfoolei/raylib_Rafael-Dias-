@@ -757,3 +757,733 @@ não posso liberar memória antes de terminar o jogo
 ```
 
 Toda engine de jogos segue uma hierarquia parecida.
+
+
+# 📚 Glossário de Termos e Conceitos — Desenvolvimento de Jogos com Raylib
+
+---
+
+# API
+
+API significa:
+
+```text
+Application Programming Interface
+```
+
+É um conjunto de funções prontas que um programador pode utilizar.
+
+Exemplo no Raylib:
+
+```c
+DrawTexture()
+PlaySound()
+InitWindow()
+```
+
+A API funciona como uma ponte entre:
+- seu código
+- a engine/biblioteca
+
+---
+
+# Asset
+
+Assets são os recursos do jogo.
+
+Exemplos:
+- imagens
+- músicas
+- sons
+- fontes
+- animações
+
+Arquivos comuns:
+
+```text
+.png
+.mp3
+.ogg
+.wav
+```
+
+---
+
+# Áudio Assíncrono
+
+Áudio assíncrono significa:
+- o som toca em paralelo
+- o jogo continua funcionando normalmente
+
+Exemplo:
+
+```c
+PlaySound(sound);
+```
+
+O jogo não pausa enquanto o som toca.
+
+---
+
+# BackBuffer
+
+O backbuffer é:
+- uma área invisível da memória gráfica
+- onde o próximo frame é desenhado
+
+A GPU desenha tudo no backbuffer primeiro.
+
+Depois:
+- o frame completo é mostrado na tela.
+
+Isso evita:
+- flickering
+- tremedeira
+- imagens incompletas
+
+---
+
+# Biblioteca
+
+Biblioteca é:
+- um conjunto de funções prontas reutilizáveis
+
+Exemplos:
+- Raylib
+- SDL
+- OpenGL
+- stdio.h
+
+---
+
+# Buffer
+
+Buffer é:
+- uma área temporária de memória
+
+Usado para:
+- armazenar dados temporariamente
+- preparar informações antes do uso final
+
+Exemplos:
+- backbuffer
+- audio buffer
+- framebuffer
+
+---
+
+# C
+
+Linguagem de programação criada em:
+- 1972
+
+Muito usada em:
+- sistemas operacionais
+- jogos
+- drivers
+- engines
+- programação de baixo nível
+
+---
+
+# CheckCollisionPointRec
+
+Função do Raylib que:
+- verifica se um ponto está dentro de um retângulo
+
+Exemplo:
+- verificar se o mouse clicou no sprite
+
+---
+
+# Colisão
+
+Colisão significa:
+- detectar interação entre objetos
+
+Exemplo:
+- tiro acertou inimigo
+- jogador bateu parede
+
+---
+
+# CPU
+
+CPU significa:
+
+```text
+Central Processing Unit
+```
+
+É o “cérebro” do computador.
+
+Responsável por:
+- lógica
+- decisões
+- execução principal do programa
+
+---
+
+# Delta Time
+
+Delta Time significa:
+
+```text
+tempo entre frames
+```
+
+Usado para:
+- movimento profissional
+- velocidade independente do FPS
+
+Exemplo:
+
+```c
+GetFrameTime()
+```
+
+---
+
+# Double Buffering
+
+Técnica usada para:
+- desenhar o frame escondido
+- mostrar apenas quando estiver pronto
+
+Usa:
+- frontbuffer
+- backbuffer
+
+---
+
+# DrawTexture()
+
+Função do Raylib que:
+- desenha imagens na tela
+
+Exemplo:
+
+```c
+DrawTexture(sprite, x, y, WHITE);
+```
+
+---
+
+# DrawRectangle()
+
+Função usada para:
+- desenhar retângulos
+
+Muito usada em:
+- protótipos
+- HUD
+- colisões
+- jogos simples
+
+---
+
+# DrawText()
+
+Função usada para:
+- desenhar texto na tela
+
+---
+
+# Engine de Jogos
+
+Engine é:
+- conjunto de sistemas prontos para criação de jogos
+
+Ela fornece:
+- gráficos
+- áudio
+- física
+- input
+- renderização
+
+Exemplos:
+- Unity
+- Unreal
+- Godot
+- Raylib
+
+---
+
+# EndDrawing()
+
+Função que:
+- finaliza o frame atual
+- envia o frame para a tela
+
+Tudo desenhado entre:
+
+```c
+BeginDrawing();
+EndDrawing();
+```
+
+faz parte do frame.
+
+---
+
+# FPS
+
+FPS significa:
+
+```text
+Frames Per Second
+```
+
+Ou seja:
+- quantos frames o jogo mostra por segundo
+
+Exemplos:
+- 30 FPS
+- 60 FPS
+- 144 FPS
+
+---
+
+# Frame
+
+Frame é:
+- uma imagem do jogo
+
+Jogos mostram:
+- vários frames rapidamente
+
+Criando ilusão de movimento.
+
+---
+
+# FrontBuffer
+
+Buffer visível no monitor.
+
+Enquanto:
+- o backbuffer é desenhado escondido
+
+o frontbuffer:
+- é o frame atual sendo mostrado.
+
+---
+
+# Game Loop
+
+Game Loop é:
+- o loop principal do jogo
+
+Exemplo:
+
+```c
+while (!WindowShouldClose())
+```
+
+Todo jogo funciona assim:
+
+```text
+atualizar
+↓
+desenhar
+↓
+mostrar
+↓
+repetir
+```
+
+---
+
+# Game Engine
+
+Outro nome para:
+- engine de jogos
+
+---
+
+# GetFrameTime()
+
+Função do Raylib que retorna:
+- tempo entre frames
+
+Usada para:
+- Delta Time
+
+---
+
+# GPU
+
+GPU significa:
+
+```text
+Graphics Processing Unit
+```
+
+É responsável por:
+- gráficos
+- pixels
+- renderização
+- shaders
+
+Possui milhares de núcleos paralelos.
+
+---
+
+# Hierarquia do Código
+
+Ordem lógica que o programa precisa seguir.
+
+Exemplo:
+
+```text
+criar janela
+↓
+carregar textura
+↓
+desenhar
+```
+
+A hierarquia existe porque:
+- algumas coisas dependem de outras.
+
+---
+
+# HUD
+
+HUD significa:
+
+```text
+Heads-Up Display
+```
+
+É a interface do jogador.
+
+Exemplos:
+- vida
+- munição
+- pontuação
+- minimapa
+
+---
+
+# Input
+
+Input significa:
+- entrada de dados do jogador
+
+Exemplos:
+- teclado
+- mouse
+- joystick
+
+---
+
+# InitAudioDevice()
+
+Inicializa o sistema de áudio.
+
+Necessário antes de:
+- carregar sons
+- tocar músicas
+
+---
+
+# InitWindow()
+
+Cria a janela do jogo.
+
+Também inicializa:
+- OpenGL
+- sistema gráfico
+- comunicação com GPU
+
+---
+
+# Loop
+
+Loop significa:
+- repetição contínua
+
+Exemplo:
+
+```c
+while()
+```
+
+---
+
+# LoadSound()
+
+Carrega:
+- efeitos sonoros curtos
+
+---
+
+# LoadTexture()
+
+Carrega:
+- imagens/texturas
+
+---
+
+# LoadMusicStream()
+
+Carrega:
+- música longa em streaming
+
+---
+
+# Memória RAM
+
+Memória usada pelo programa durante execução.
+
+Armazena:
+- variáveis
+- sons
+- dados do jogo
+
+---
+
+# OpenGL
+
+API gráfica usada para:
+- comunicação com GPU
+
+Raylib usa OpenGL internamente.
+
+---
+
+# Paralelismo
+
+Capacidade de executar:
+- várias tarefas ao mesmo tempo
+
+GPU é especializada nisso.
+
+---
+
+# Pixel
+
+Menor ponto de uma imagem digital.
+
+A tela é formada por milhões de pixels.
+
+---
+
+# PlaySound()
+
+Executa:
+- efeito sonoro curto
+
+---
+
+# PlayMusicStream()
+
+Inicia:
+- música de fundo
+
+---
+
+# PNG
+
+Formato de imagem muito usado em jogos.
+
+Características:
+- compressão
+- transparência
+- qualidade alta
+
+---
+
+# Programação Procedural
+
+Modelo de programação baseado em:
+- funções
+- sequência lógica
+- fluxo procedural
+
+Muito comum em C.
+
+---
+
+# Raylib
+
+Biblioteca gráfica escrita em C.
+
+Voltada para:
+- aprendizado
+- jogos 2D
+- jogos simples
+- ensino de computação gráfica
+
+---
+
+# Rectangle
+
+Estrutura usada para:
+- representar retângulos
+
+Muito usada em:
+- colisão
+- HUD
+- áreas clicáveis
+
+---
+
+# Renderização
+
+Processo de:
+- desenhar imagens na tela
+
+A GPU faz renderização.
+
+---
+
+# Shader
+
+Programa executado na GPU.
+
+Usado para:
+- iluminação
+- sombras
+- efeitos gráficos
+
+---
+
+# Sound
+
+Tipo usado para:
+- efeitos sonoros curtos
+
+Carregado totalmente na RAM.
+
+---
+
+# Sprite
+
+Imagem usada como objeto do jogo.
+
+Exemplos:
+- personagem
+- inimigo
+- item
+
+---
+
+# Streaming de Música
+
+Técnica onde:
+- música é carregada aos poucos
+
+Usada para:
+- arquivos grandes
+
+---
+
+# Texture
+
+Imagem carregada na GPU.
+
+---
+
+# Texture2D
+
+Tipo usado no Raylib para:
+- armazenar texturas 2D
+
+---
+
+# UpdateMusicStream()
+
+Atualiza continuamente a música em streaming.
+
+Deve ser chamada:
+- dentro do loop do jogo
+
+---
+
+# VRAM
+
+Memória da placa de vídeo.
+
+Usada para:
+- texturas
+- buffers
+- renderização
+
+---
+
+# while (!WindowShouldClose())
+
+Loop principal do jogo.
+
+Mantém o programa funcionando enquanto:
+- a janela não for fechada
+
+---
+
+# WindowShouldClose()
+
+Função que verifica:
+- se o usuário quer fechar o jogo
+
+Exemplos:
+- apertar ESC
+- clicar no X da janela
+
+---
+
+# WHITE
+
+Constante de cor da Raylib.
+
+Representa:
+- cor branca
+
+Também usada para:
+- desenhar textura sem alterar sua cor original
+
+---
+
+# X e Y
+
+Coordenadas usadas para posicionamento.
+
+| Coordenada | Direção |
+|---|---|
+| X | horizontal |
+| Y | vertical |
+
+---
+
+# Sistema de Coordenadas 2D
+
+No Raylib:
+
+```text
+(0,0)
+```
+
+fica no canto superior esquerdo.
+
+```text
+X → direita
+Y ↓ baixo
+```
+
+---
+
+# Conceito Mais Importante
+
+Todo jogo basicamente funciona assim:
+
+```text
+ATUALIZAR
+    ↓
+DESENHAR
+    ↓
+MOSTRAR
+    ↓
+REPETIR
+```
+
+Esse é o coração de praticamente toda engine de jogos.
