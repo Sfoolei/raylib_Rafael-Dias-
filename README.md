@@ -182,7 +182,9 @@ engine de áudio
 interação sonora
 feedback ao jogador
 
-🕹️ Projeto Final
+# 🕹️ Projeto Final
+
+```text
 Arquivo:
 mainFINAL.md
 
@@ -195,11 +197,15 @@ O aluno integrará:
 ✅ FPS
 ✅ pontuação
 ✅ game loop completo
+```
 
 Resultado:
 mini jogo funcional estilo shooter 2D
 
-🧩 Conceitos Fundamentais Trabalhados
+
+# 🧩 Conceitos Fundamentais Trabalhados
+
+```text
 
 Durante o curso o aluno terá contato com:
 Conceito	Descrição
@@ -213,20 +219,28 @@ Input	teclado e mouse
 Áudio	efeitos sonoros
 Colisão	interação entre objetos
 Feedback	resposta audiovisual
+```
 
-⚙️ Tecnologias Utilizadas
+# ⚙️ Tecnologias Utilizadas
+
+```text
+
 Tecnologia	Uso
 C	linguagem principal
 Raylib	biblioteca gráfica
 OpenGL	renderização
 GCC	compilador
 VSCode/CodeBlocks	ambiente de desenvolvimento
+```
 
 🛠️ Como Compilar
 Windows (GCC)
 gcc main.c -o jogo.exe -lraylib -lopengl32 -lgdi32 -lwinmm
 
-▶️ Como Executar
+# ▶️ Como Executar
+
+```text
+
 ./jogo.exe
 
 ou:
@@ -262,6 +276,7 @@ DESENHAR
 MOSTRAR
     ↓
 REPETIR
+```
 
 Esse ciclo é o coração de praticamente toda engine de jogos.
 
