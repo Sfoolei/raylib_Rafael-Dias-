@@ -1,4 +1,4 @@
-# Explicação Completa da Hierarquia do Código Raylib
+# Explicação Completa da Hierarquia do Código Raylib e Glossário
 
 ```c
 #include <stdio.h>
